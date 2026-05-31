@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Calculator Experience</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Ambient Lighting -->
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    <div class="grid-texture"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Main State Machine Container -->
+    <main id="app-container" class="state-landing">
+        
+        <!-- Hero Overlay -->
+        <div class="landing-overlay" id="landing-overlay">
+            <h1 class="hero-title reveal-blur">CALCULATOR</h1>
+            <p class="hero-subtitle reveal-fade delay-1">Modern Interactive Experience</p>
+            <p class="instruction reveal-fade delay-2">Click device to explore</p>
+        </div>
+
+        <!-- 3D Device Container -->
+        <div class="device-viewport">
+            <!-- The CSS Hardware Device -->
+            <div class="calculator-device" id="calculator-device">
+                <div class="glass-reflection"></div>
+                
+                <!-- Screen Bezel Assembly -->
+                <div class="device-bezel">
+                    <div class="display-screen">
+                        <div class="previous-operand" id="previous-operand"></div>
+                        <div class="current-operand" id="current-operand">0</div>
+                    </div>
+                </div>
+
+                <!-- Hardware Keypad -->
+                <div class="keypad">
+                    <button class="btn btn-action" data-action="clear">C</button>
+                    <button class="btn btn-action" data-action="delete">DEL</button>
+                    <button class="btn btn-operator" data-action="operator">÷</button>
+                    <button class="btn btn-operator" data-action="operator">×</button>
+
+                    <button class="btn btn-number">7</button>
+                    <button class="btn btn-number">8</button>
+                    <button class="btn btn-number">9</button>
+                    <button class="btn btn-operator" data-action="operator">-</button>
+
+                    <button class="btn btn-number">4</button>
+                    <button class="btn btn-number">5</button>
+                    <button class="btn btn-number">6</button>
+                    <button class="btn btn-operator" data-action="operator">+</button>
+
+                    <button class="btn btn-number">1</button>
+                    <button class="btn btn-number">2</button>
+                    <button class="btn btn-number">3</button>
+                    <button class="btn btn-equal btn-accent" data-action="calculate">=</button>
+
+                    <button class="btn btn-number btn-zero">0</button>
+                    <button class="btn btn-number">.</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Close / Back Button -->
+        <button class="btn-close" id="btn-close"><i class="fa-solid fa-xmark"></i></button>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
